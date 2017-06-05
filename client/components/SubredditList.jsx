@@ -11,7 +11,7 @@ const Subreddit = ({subreddits}) => (
         key={i}
         title={post.title}
         date={new Date(post.created*1000).toString()}
-        summary={post.selftext}
+        summary={post.selftext.substring(0,500)+"...."}
         />
     )}
   </div>
