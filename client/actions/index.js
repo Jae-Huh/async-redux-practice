@@ -3,6 +3,7 @@ import request from 'superagent'
 export const SHOW_ERROR = 'SHOW_ERROR'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const REQUEST_POSTS = 'REQUEST_POSTS'
+export const SEARCH_REDDIT = 'SEARCH_REDDIT'
 
 export const requestPosts = () => {
   return {
@@ -21,6 +22,13 @@ export const showError = (errorMessage) => {
   return {
     type: SHOW_ERROR,
     errorMessage: errorMessage
+  }
+}
+
+export const enterSubreddit = (subreddit) => {
+  return {
+    type: SEARCH_REDDIT,
+    subreddit: subreddit
   }
 }
 
